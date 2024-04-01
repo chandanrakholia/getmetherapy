@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View, Dimensions, TextInput, Button, Alert } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, Dimensions, TextInput, Button, Alert, Image } from 'react-native'
+import React, { useEffect } from 'react'
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
+import icon from "../assets/google.png"
+
 const Login = () => {
     return (
         <>
@@ -45,8 +47,8 @@ const Login = () => {
                 </View>
                 <View style={{ flex: 1, height: 1, backgroundColor: '#878787' }} />
             </View>
-            <View> 
-                <Text>Google</Text>
+            <View style={{ alignItems: "center" }}>
+                <Image source={icon}></Image>
             </View>
             <View>
                 <Text style={styles.maintext}>
@@ -118,18 +120,18 @@ const styles = StyleSheet.create({
     orsign: {
         // width: 327,
         flexDirection: 'row',
-        justifyContent:"space-around",
+        justifyContent: "space-around",
         alignItems: 'center'
     },
-    maintext:{
+    maintext: {
         textAlign: "center",
     },
-    dont:{
-        fontSize:14,
-        lineHeight:20,
-        fontWeight:"400",
+    dont: {
+        fontSize: 14,
+        lineHeight: 20,
+        fontWeight: "400",
     },
-    register:{
+    register: {
         color: "#FE8C00",
         fontSize: 14,
         lineHeight: 20,
